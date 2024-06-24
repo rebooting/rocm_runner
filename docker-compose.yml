@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  automatic:
+    image: localhost local/automatic
+    command: sleep infinity
+    groups:
+      - video
+      - render
+    ports:
+      - 7860:7860
+    device:
+      - /dev/fdk
+      - /dev/dri
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - python:/python
+
+volumes:
+  python:
