@@ -6,6 +6,8 @@ Steps
 
 ```make build```
 
+```make run```
+
 ```make volume-up```
 
 ```make restore```
